@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebProject</title>
+    <link asp-href-include="~/css/style.css" rel="stylesheet" asp-append-version="true" />
+    @RenderSection("styles", false)
+</head>
+<body>
+    <div class="container">
+        @await Component.InvokeAsync("Header")
+        @RenderBody()
+    </div>
+</body>
+</html>

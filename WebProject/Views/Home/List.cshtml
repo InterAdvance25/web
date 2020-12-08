@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebProject.Models.Vehicle.PassengerCar>
+@{
+    ViewData["Title"] = "List";
+}
+@section styles {
+    <link asp-href-include="~/css/list.css" rel="stylesheet" asp-append-version="true" />
+}
+<div style="padding:3%;">
+    @await Component.InvokeAsync("NavBar")
+    @foreach (var item in Model)
+    {
+    <div class="listOfCar">
+        <div class="hdline">
+            <h1>@item.Name</h1><br />
+            <p>Цена:@item.Price</p><br />
+        </div>
+        <div class="FElm">
+            <div>
+                <img class="img_list" src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" />
+            </div>
+            <br />
+            <a class="btn_style" asp-route-id="@item.UserId" asp-route-carname="@item.Name"
+               asp-controller="Home" asp-action="Details">Подробнее</a>
+        </div>
+    </div>
+    }
+</div>
+

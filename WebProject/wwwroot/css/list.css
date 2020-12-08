@@ -1,0 +1,41 @@
+﻿.listOfCar {
+    padding: 3%;
+    font-size: 20px;
+    color: rgb(9, 9, 9);
+    border-bottom:1px solid black;
+    display:flex;
+    justify-content:space-around;
+
+}
+.img_list {
+    width: 100%;
+}
+.btn_style{
+    text-decoration:none;
+}
+.FElm {
+    width: 60%;
+}
+.hdline {
+    align-self: center;
+    flex-grow: 1;
+    margin: auto;
+    max-width:40%;
+    font-size:2em;
+}
+.search_box{
+    display:flex;
+}
+.center {
+    margin: auto;
+    display:flex;
+}
+.search,.btn_search {
+    padding: 2%;
+    margin:60px;  
+    width:100%;
+    height:30%;
+}
+.btn_search{
+   width:100%;
+}

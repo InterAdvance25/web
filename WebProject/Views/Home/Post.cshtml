@@ -1,0 +1,50 @@
+﻿@model WebProject.ViewModels.PassengerCarViewModel
+@section styles{
+    <link asp-href-include="~/css/PostStyles/PostStyle.css" rel="stylesheet" asp-append-version="true" />
+}
+<div class="container">
+    <div class="form">
+        <form method="post" asp-action="Post" asp-controller="Home" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name">Наименование авто <br /> и модели:</label><br />
+                <input asp-for="Name" placeholder="BMW M3" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price">Цена:</label><br />
+                <input asp-for="Price" placeholder="20000" />
+                <span asp-validation-for="Price"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color">Цвет:</label><br />
+                <input asp-for="Color" placeholder="Черный" />
+                <span asp-validation-for="Color"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Motor">Двигатель:</label><br />
+                <input asp-for="Motor" placeholder="RBDETT36" />
+                <span asp-validation-for="Motor"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BodyWork">Кузов:</label><br />
+                <input asp-for="BodyWork" placeholder="Стандарт" />
+                <span asp-validation-for="BodyWork"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Описание:</label><br />
+                <textarea asp-for="Description" cols="40" rows="9"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image">Выберите картинки</label><br />
+                <input asp-for="Image" multiple="true" min="1" max="4" />
+                <span asp-validation-for="Description"></span>
+            </div>
+            <div class="form-group">
+                <button class="postbutton" type="submit">Добавить</button>
+                <a href="#" class="back_to-index">Назад</a>
+            </div>
+        </form>
+    </div>
+</div>

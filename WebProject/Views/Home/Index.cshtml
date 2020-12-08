@@ -1,0 +1,49 @@
+﻿@model WebProject.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section styles {
+    <link asp-href-include="~/css/HomeStyles/indexstyle.css" rel="stylesheet" asp-append-version="true" />
+}
+<div class="flex-profile">
+    <div class="flex-element-one">
+        <h1 class="display-text">Здравствуйте @User.Identity.Name</h1><br />
+        <div><p>Фамилия: @Model.User.SurName</p></div><br />
+        <div><p>Email: @Model.User.Email</p></div><br />
+        <div><p>Местоположение: @Model.User.Location</p></div><br/>
+        <a asp-action="DeleteUser" asp-controller="Home" class="btn_delete_profile">Удалить профиль</a>
+    </div>
+    <div class="flex-element-two">
+        <div class="addition_or_exit">
+            <a asp-action="Post" asp-controller="Home" class="advertisment">Добавить объявление</a>
+            <a asp-action="Logout" asp-controller="Account" class="exit">Выйти</a>
+        </div>
+    </div>
+</div>
+<div>
+    <h1 style="padding:2%;color:#222020;">Мои объявления</h1>
+</div>
+
+
+@foreach (var item in Model.User.PassengerCars)
+{
+    <div class="deleting"><a asp-action="Delete" asp-controller="Home" 
+                                  asp-route-id="@item.Id" class="btn_delete">Удалить</a></div>
+    <div class="list">
+        <div class="flexUserContent">
+            <h1>Модель : @item.Name</h1>
+            <p>Цена : @item.Price</p>
+            <p>Кузов : @item.BodyWork</p>
+            <p>Цвет : @item.Color</p>
+            <p>Двигатель : @item.Motor</p>
+            <p class="desc">Описание : @item.Description</p>
+        </div>
+        @if (item.Image != null)
+        {
+            <div class="flexImage">
+                <img class="img_list" src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" />
+            </div>
+        }
+    </div>
+}
+

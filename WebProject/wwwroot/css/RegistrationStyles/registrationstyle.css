@@ -1,0 +1,97 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    font-family: 'Lato', sans-serif;
+    color: #1f1c2e;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: #d1d1d1;
+    background-color: #f8f8fa;
+}
+.container {
+    flex-basis: 100%;
+    padding: 4%;
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/11/02/08/speed-1249610_1280.jpg");
+    background-size:cover;
+}
+.flex-element {
+    flex-basis: 100%;
+    background-color: rgba(14, 11, 18,.9);
+    padding:9px;
+}
+.form-group {
+    position: relative;
+    padding: 2%;
+    font-size: 20px;
+    color: #d7d7dc;
+    width: 40%
+}
+.form-group-flexible {
+    display: flex;
+    position: relative;
+    margin: 0px auto;
+    padding: 2%;
+    font-size: 20px;
+    color: #d7d7dc;
+}
+.form-group-flexible .form-element,.form-element-2 {
+    min-width: 30%;
+}
+.form-element-2{margin:0px 0px 0px 20px}
+input {
+    width: 100%;
+    padding: 9px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 12px;
+    border-radius: 4px;
+    outline-style: none;
+    border-color: #3b435a;
+    background-color: rgb(14, 11, 18);
+    color: #d7d7dc;
+    border-radius: 2px;
+    border-style: solid;
+}
+input:focus{
+    border-color:brown;
+    box-shadow:0px 0px 4px brown;
+}
+ input[type=number] {
+     width:20%;
+ }
+.field-Validation, .field-email, 
+.password_field-Validation, 
+.confirm_password_field-Validation, 
+.field_phone_Number-Validation {
+    font-size: 18px;
+    color: brown;
+}
+.phone_Number-Validation {
+    border:none;
+    border-bottom:1px solid;
+}
+.btn-registration {
+    padding: 10px;
+    background-color: #1f1fd1;
+    color: aliceblue;
+    border: none;
+}
+.back_to-Menu {
+    text-decoration:none;
+    padding: 11px 60px;
+    background-color: #1f1fd1;
+    color: aliceblue;
+    border: none;
+    display:inline-block;
+    font-size:small;
+}
+

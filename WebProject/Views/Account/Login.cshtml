@@ -1,0 +1,51 @@
+﻿@model WebProject.ViewModels.LoginViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link asp-href-include="~/css/AuthorizationStyles/style.css" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <script asp-src-include="~/js/filevalidation.js" defer asp-append-version="true"></script>
+    <title>WebProject</title>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-element">
+            <header>
+                <div>
+                    <h1>Покупка / Продажа <br /> Авто</h1>
+                </div>
+            </header>
+            <section>
+                <div class="form">
+                    <form method="post" asp-action="Login" asp-antiforgery="true">
+                        <div class="form-group">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <label>Email</label><br />
+                            <input asp-for="Email" placeholder="Введите Email..." class="emailValidation" />
+                            <span asp-validation-for="Email" class="spanEmailValidation"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Пароль</label><br />
+                            <input asp-for="Password"  placeholder="Введите Пароль..." class="passwordValidation" />
+                            <span asp-validation-for="Password" class="spanPasswordValidation" ></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Запомнить</label>
+                            <input asp-for="IsPersistent" />
+                        </div>
+                        <div class="form-group last_form_group">
+                            <button type="submit">Авторизация</button>
+                            <a asp-action="Register" asp-controller="Account">Регситрация</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,121 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: #d1d1d1;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-profile {
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    font-size:20px;
+}
+.display-text {
+    font-size: 3em;
+    color: #222020;
+}
+.flex-element-two{
+    flex-grow:1;
+    display:flex;
+}
+.addition_or_exit{
+    margin:auto 0px auto auto;
+    display:flex;
+    justify-content:space-around;
+}
+.advertisment {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #303438;
+    margin: 20px;
+    padding: 12px;
+}
+.exit {
+    text-decoration: none;
+    padding: 12px 40px;
+    color: aliceblue;
+    background-color: #303438;
+    margin: 20px;
+}
+.advertisment:hover,.exit:hover {
+  box-shadow: 0px 0px 4px #303438;
+ }
+.flex_element {
+    display: flex;
+    flex-direction: row;
+}
+.flex-element-one {
+    color: #222020;
+    font-size:18px;
+}
+.list{
+    margin:auto 0px;
+    background-color:black;
+    padding:2%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    font-size:20px;
+}
+.flexUserContent {
+    width:40%;
+    padding: 2%;
+}
+.flexImage {
+    padding: 2%;
+    width: 60%;
+    overflow: hidden;
+}
+.line {
+    display: flex;
+    flex-direction: row;
+}
+.img_list {
+   max-width:100%;
+}
+.desc{
+    max-width:400px;
+    word-break:break-word;
+}
+.btn_delete {
+    position: relative;
+    bottom: -70px;
+    margin-left: auto;
+    padding: 1.2em;
+    text-decoration: none;
+    background-color:rgb(215,33,33);
+    margin-right: 4%;
+    color: rgb(240,240,240);
+}
+.deleting{
+    background:black;
+    display:flex;
+    justify-content:flex-end;
+}
+.btn_delete_profile{
+    display:block;
+    text-decoration:none;
+    background-color:aliceblue;
+    padding:2%;
+    margin:4% 0px;
+    width:29%;
+}

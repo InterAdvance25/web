@@ -1,0 +1,104 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: #d1d1d1;
+}
+.container {
+    flex-grow: 1;
+    display: flex;
+    background-image: url(../../Images/backgroundCar.jpg);
+    background-size: cover;
+}
+.flex-element {
+    padding: 10px;
+    background-color: rgba(20,20,20,.8);
+    margin: auto auto auto auto;
+    padding:20px;
+}
+header h1 {
+    font-size: 6em;
+    text-align: center;
+    color: #d1d1d1;
+    font-weight:lighter;
+}
+.form-group {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    padding: 2.9%;
+}
+.form-group input {
+     padding: 9px;
+     margin-top: 12px;
+     background-color: inherit;
+     border: none;
+     outline-style: none;
+     border-bottom: 2px solid brown;
+     min-width: 100%;
+     color: #d1d1d1;
+     font-size:18px;
+ }
+.form-group input:focus {
+        transition-duration:0.4s;
+        box-shadow:0px 0px 24px brown;
+    }
+
+input[type=checkbox] {
+    display:inline-block;
+    min-width:0px;
+}
+button[type=submit] {
+    background-color: brown;
+    color: white;
+    width: 120px;
+    height: 30px;
+    margin-left: 30px;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    background-color: rgba(20,20,20,.8);
+    display: inline-block;
+    color: dodgerblue;
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    margin-left: 90px;
+    font-size: medium;
+    padding: 4px;
+    border: none;
+}
+button[type=submit]:hover {
+
+    filter: brightness(90%);
+    
+}
+a:hover {
+    filter: brightness(90%);
+}
+.validation-summary-errors {
+    margin: 12px;
+    color: #f82929;
+}
+.field-validation-error,.error {
+    position: absolute;
+    top: 60px;
+    right: -120px;
+    position: center;
+    color: #f31616;
+}
